@@ -1,0 +1,13 @@
+.card {
+	padding: 30px;
+	text-align: left;
+	h1 {
+		margin-bottom: 20px;
+	}
+	& .list {
+		li {
+			list-style-type: none;
+            margin-bottom: 10px;
+		}
+	}
+}

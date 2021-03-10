@@ -1,33 +1,52 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { Route, Switch } from 'react-router';
-import { useDispatch, useSelector } from "react-redux"
-import Preloader from '../common/Preloader/Preloader';
-import Animals from './Animals/Animals';
-import Today from './Today/Today';
-import Login from './../Auth/Auth'
-
+import { useSelector } from 'react-redux';
+import Login from './../Auth/Auth';
+import TodayContainer from './Today/TodayContainer';
+import AnimalsContainer from './Animals/AnimailContainer';
+import ModalElem from './../common/Modal/ModalElem';
+import AnimalCard from './AnimalCard/AnimalCard';
 
 const ContentContaner = () => {
-
-    const state = useSelector((state) => state);
-    const dispatch = useDispatch();
+	const state = useSelector((state) => state);
 	const isAuth = state.authPage.isAuth;
 
-/*     useEffect(() => {
-      dispatch(loginTC());
-    }, [])
- */
+	const [modalActive, setModalActive] = useState(false);
+	const [checkElem, setCheckElem] = useState({});
 
 	return (
 		<div>
-			<Switch>  
-				<Route path="/today" render={() => <Today isAuth={isAuth} />} />
-				<Route path="/animals" render={()=> <Animals isAuth={isAuth}  />} />
-				<Route path="/" render={()=> <Login />} />
+			<ModalElem modalActive={modalActive} setModalActive={setModalActive}>
+				<AnimalCard checkElem={checkElem} />
+			</ModalElem>
+
+			<Switch>
+				<Route
+					path="/today"
+					render={() => (
+						<TodayContainer
+							isAuth={isAuth}
+							todayPage={state.todayPage}
+							setModalActive={setModalActive}
+							setCheckElem={setCheckElem}
+						/>
+					)}
+				/>
+				<Route
+					path="/animals"
+					render={() => (
+						<AnimalsContainer
+							isAuth={isAuth}
+							animalsPage={state.animalsPage}
+							setModalActive={setModalActive}
+							setCheckElem={setCheckElem}
+						/>
+					)}
+				/>
+				<Route path="/" render={() => <Login />} />
 			</Switch>
 		</div>
 	);
 };
 
-
-export const MemodContentContaner= React.memo(ContentContaner);
+export const MemodContentContaner = React.memo(ContentContaner);

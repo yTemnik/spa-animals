@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from './redux/redux-store'
+import store from './redux/redux-store';
 import s from './App.module.scss';
-import  { MemodContentContaner } from './components/Content/ContentContainer';
+import { MemodContentContaner } from './components/Content/ContentContainer';
 import Header from './components/Header/Header';
 
 function App() {

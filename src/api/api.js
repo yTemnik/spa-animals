@@ -12,11 +12,14 @@ export const authAPI = {
 				'Content-Type': 'application/json',
 				username: login,
 				password: password,
-/* 				username: 'test_user_1',
+				/* 				username: 'test_user_1',
 				password: 'user10000', */
 			})
 			.then((response) => {
 				return response;
+			})
+			.catch(err => {
+			    return err;
 			});
 	},
 };
@@ -31,11 +34,23 @@ export const todayAPI = {
 				},
 			})
 			.then((response) => {
-				if (response.status === 200) {
-					console.log(response.data.results);
-				}
+				return response;
 			});
 	},
 };
 
-export const animalsAPI = {};
+export const animalsAPI = {
+	getAnimalsInfo(token) {
+		return instance
+			.get(`https://acits-api.herokuapp.com/api/v1/animals/`, {
+				headers: {
+					Authorization: `Bearer ${token}`,
+					'current-shelter': 1,
+				},
+			})
+			.then((response) => {
+				return response;
+			});
+	},
+};
+

@@ -1,8 +1,6 @@
 import React from 'react';
 import s from './ModalElem.module.scss';
 
-
-
 const ModalElem = ({ modalActive, setModalActive, children }) => {
 	return (
 		<div
