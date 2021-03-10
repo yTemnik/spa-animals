@@ -1,0 +1,36 @@
+.container {
+    width : 100%;
+    margin: 0 auto;
+}
+
+.form {
+    margin: 0 auto;
+    width : 50%;
+    background: #fff;
+    padding: 40px 0;
+}
+
+.input {
+    padding: 12px;
+    display: block;
+    width: 16vw;
+    margin: 0 auto;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn {
+    padding : 10px 30px;
+    border-radius: 5px;
+    font-size: .75vw;
+    border : 2px solid #4f9df7; 
+    background: transparent;
+    margin-top: 15px;
+    cursor: pointer;
+    outline: none;
+}

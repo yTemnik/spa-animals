@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import Preloader from '../common/Preloader/Preloader';
 import Animals from './Animals/Animals';
 import Today from './Today/Today';
-import { requestTodayInfo } from '../../redux/today-reducer';
+import { login } from '../../redux/today-reducer';
 
 const ContentContaner = () => {
 
@@ -12,7 +12,7 @@ const ContentContaner = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-      dispatch(requestTodayInfo());
+      dispatch(login());
     }, [])
 
 

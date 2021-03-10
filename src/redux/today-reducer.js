@@ -1,5 +1,6 @@
-import { todayAPI } from '../api/api';
+
 import { dispatch } from 'redux';
+import { authAPI } from '../api/api';
 
 const SET_TODAY_INFO = 'SET_TODAY_INFO';
 
@@ -22,10 +23,10 @@ export const setTodayInfo = () => ({
 	type: SET_TODAY_INFO,
 });
 
-export const requestTodayInfo = () => {
+export const login = () => {
 	return () => {
-		todayAPI.getTodayInfo().then((response) => {
-            console.log(response)
+		authAPI.login().then((response) => {
+			/* 	console.log(response) */
 		});
 	};
 };

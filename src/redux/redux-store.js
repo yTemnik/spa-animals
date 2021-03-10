@@ -2,11 +2,13 @@ import { applyMiddleware, combineReducers, createStore } from "redux";
 import thunkMiddleware from "redux-thunk";
 import animalsReducer from "./animals-reducer";
 import todayReducer from "./today-reducer";
+import {reducer as formReducer} from "redux-form"
 
 
 let reducers = combineReducers({
   todayPage : todayReducer,
-  animalsPage : animalsReducer
+  animalsPage : animalsReducer,
+  form : formReducer
 })
 
 
