@@ -4,26 +4,30 @@ import { useDispatch, useSelector } from "react-redux"
 import Preloader from '../common/Preloader/Preloader';
 import Animals from './Animals/Animals';
 import Today from './Today/Today';
-import { login } from '../../redux/today-reducer';
+import Login from './../Auth/Auth'
+
 
 const ContentContaner = () => {
 
     const state = useSelector((state) => state);
     const dispatch = useDispatch();
+	const isAuth = state.authPage.isAuth;
 
-    useEffect(() => {
-      dispatch(login());
+/*     useEffect(() => {
+      dispatch(loginTC());
     }, [])
-
+ */
 
 	return (
 		<div>
-			<Switch>
-				<Route path="/today" render={() => <Today />} />
-				<Route path="/animals" render={()=> <Animals />} />
+			<Switch>  
+				<Route path="/today" render={() => <Today isAuth={isAuth} />} />
+				<Route path="/animals" render={()=> <Animals isAuth={isAuth}  />} />
+				<Route path="/" render={()=> <Login />} />
 			</Switch>
 		</div>
 	);
 };
 
-export default ContentContaner;
+
+export const MemodContentContaner= React.memo(ContentContaner);

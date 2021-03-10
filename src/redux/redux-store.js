@@ -3,11 +3,13 @@ import thunkMiddleware from "redux-thunk";
 import animalsReducer from "./animals-reducer";
 import todayReducer from "./today-reducer";
 import {reducer as formReducer} from "redux-form"
+import authReducer from "./auth-reducer";
 
 
 let reducers = combineReducers({
   todayPage : todayReducer,
   animalsPage : animalsReducer,
+  authPage : authReducer,
   form : formReducer
 })
 

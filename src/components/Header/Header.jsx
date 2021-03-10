@@ -1,22 +1,23 @@
 import React from 'react';
-import s from './Header.module.scss'
+import { NavLink } from 'react-router-dom';
+import s from './Header.module.scss';
 
 const Header = () => {
 	return (
-        <header>
+		<header>
 			<ul className={s.list}>
 				<li>
-					<a href="/today" className={s.link} >
+					<NavLink to={"/today"} className={s.link}>
 						Сегодня
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="/animals" className={s.link}>
+					<NavLink to={"/animals"} className={s.link}>
 						Животные
-					</a>
+					</NavLink>
 				</li>
 			</ul>
-        </header>
+		</header>
 	);
 };
 

@@ -6,20 +6,17 @@ const instance = axios.create({
 });
 
 export const authAPI = {
-	login() {
+	login(login, password) {
 		return instance
 			.post(`/api/token/`, {
 				'Content-Type': 'application/json',
-				username: 'test_user_1',
-				password: 'user10000',
+				username: login,
+				password: password,
+/* 				username: 'test_user_1',
+				password: 'user10000', */
 			})
 			.then((response) => {
-				if (response.status === 200) {
-					const token = JSON.stringify(response.data.access);
-					localStorage.setItem('token', token.replace(/\"/g, ''));
-					todayAPI.getTodayInfo(token.replace(/\"/g, ''));
-					return response;
-				}
+				return response;
 			});
 	},
 };

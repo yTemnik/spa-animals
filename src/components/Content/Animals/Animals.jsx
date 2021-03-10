@@ -1,8 +1,11 @@
+import react from 'react'
+import { Redirect } from 'react-router';
 
 
+const Animals = (props) => {
 
+    if (!props.isAuth) return <Redirect to="/" />
 
-const Animals = () => {
     return (
         <div>
             ANIMALS

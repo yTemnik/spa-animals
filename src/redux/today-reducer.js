@@ -23,12 +23,6 @@ export const setTodayInfo = () => ({
 	type: SET_TODAY_INFO,
 });
 
-export const login = () => {
-	return () => {
-		authAPI.login().then((response) => {
-			/* 	console.log(response) */
-		});
-	};
-};
+
 
 export default todayReducer;
