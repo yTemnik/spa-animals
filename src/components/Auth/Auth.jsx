@@ -4,7 +4,6 @@ import { Field, reduxForm } from 'redux-form';
 import s from './Auth.module.scss';
 import { loginTC } from './../../redux/auth-reducer';
 import { Redirect } from 'react-router';
-import { requiredField } from './validators/validators';
 import { InputElem } from './validators/InputElem';
 
 const AuthForm = (props) => {
@@ -17,7 +16,6 @@ const AuthForm = (props) => {
 					placeholder={'Логин'}
 					name={'login'}
 					component={InputElem}
-					validate={[requiredField]}
 				/>
 				<Field
 					className={s.input}
@@ -25,11 +23,11 @@ const AuthForm = (props) => {
 					placeholder={'Пароль'}
 					name={'password'}
 					component={InputElem}
-					validate={[requiredField]}
 				/>
+				{props.errorAuth ? (
+					<div className={s.error}>Имя пользователя или пароль введены не верно</div>
+				) : null}
 				<button className={s.btn}>Войти</button>
-{/* 				{!!props.error 
-				? <span>Имя пользователя или пароль введены не верно</span> : null} */}
 			</form>
 		</div>
 	);
@@ -50,7 +48,7 @@ const Login = (props) => {
 
 	return (
 		<>
-			<AuthReduxForm onSubmit={onSubmit} />
+			<AuthReduxForm errorAuth={props.error} onSubmit={onSubmit} />
 		</>
 	);
 };

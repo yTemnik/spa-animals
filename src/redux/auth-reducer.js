@@ -52,7 +52,7 @@ export const loginTC = (login, password) => {
 				const token = JSON.stringify(response.data.access);
 				localStorage.setItem('token', token.replace(/\"/g, ''));
 				dispatch(updateAuthData(login, password, true));
-			}
+			} 
 		});
 	};
 };
