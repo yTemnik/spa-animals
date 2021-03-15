@@ -10,6 +10,12 @@ const Today = (props) => {
 		<div>
 			{props.todayPage.loading ? (
 				<table className={s.table}>
+					<thead>
+						<tr>
+							<td className={s.subtitle}>Кличка</td>
+							<td className={s.subtitle}>Назначение</td>
+						</tr>
+					</thead>
 					<tbody>
 						{props.todayPage.todayInfo.map((elem) => (
 							<tr key={elem.animal.id}>
@@ -22,7 +28,6 @@ const Today = (props) => {
 									{elem.animal.name}
 								</td>
 								<td>{elem.animal.spec_name}</td>
-								<td>{elem.my_type}</td>
 							</tr>
 						))}
 					</tbody>

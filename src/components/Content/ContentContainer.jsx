@@ -7,7 +7,7 @@ import AnimalsContainer from './Animals/AnimailContainer';
 import ModalElem from './../common/Modal/ModalElem';
 import AnimalCard from './AnimalCard/AnimalCard';
 
-const ContentContaner = () => {
+const ContentContainer = () => {
 	const state = useSelector((state) => state);
 	const isAuth = state.authPage.isAuth;
 
@@ -49,4 +49,4 @@ const ContentContaner = () => {
 	);
 };
 
-export const MemodContentContaner = React.memo(ContentContaner);
+export default ContentContainer;

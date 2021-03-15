@@ -3,13 +3,19 @@ import Preloader from '../../common/Preloader/Preloader';
 import s from '../Today/Today.module.scss';
 
 const Animals = (props) => {
-
 	if (!props.isAuth) return <Redirect to="/" />;
 
 	return (
 		<div>
 			{props.animalsPage.loading ? (
 				<table className={s.table}>
+					<thead>
+						<tr>
+							<td className={s.subtitle}>Кличка</td>
+							<td className={s.subtitle}>Тип животного</td>
+							<td className={s.subtitle}>Подтип</td>
+						</tr>
+					</thead>
 					<tbody>
 						{props.animalsPage.animalsInfo.map((elem) => (
 							<tr key={elem.id}>
