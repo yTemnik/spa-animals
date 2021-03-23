@@ -12,8 +12,8 @@ const Today = (props) => {
 				<table className={s.table}>
 					<thead>
 						<tr>
-							<td className={s.subtitle}>Кличка</td>
-							<td className={s.subtitle}>Назначение</td>
+							<th className={s.subtitle}>Кличка</th>
+							<th className={s.subtitle}>Назначение</th>
 						</tr>
 					</thead>
 					<tbody>

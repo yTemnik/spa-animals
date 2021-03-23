@@ -7,13 +7,13 @@ const Header = () => {
 		<header>
 			<ul className={s.list}>
 				<li>
-					<NavLink to={"/today"} className={s.link}>
-						Сегодня
+					<NavLink to={'/today'} activeClassName={s.isActive}>
+						<span>Сегодня</span>
 					</NavLink>
 				</li>
 				<li>
-					<NavLink to={"/animals"} className={s.link}>
-						Животные
+					<NavLink to={'/animals'} activeClassName={s.isActive}>
+						<span>Животные</span>
 					</NavLink>
 				</li>
 			</ul>

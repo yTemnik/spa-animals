@@ -1,6 +1,6 @@
 import { Redirect } from 'react-router';
 import Preloader from '../../common/Preloader/Preloader';
-import s from '../Today/Today.module.scss';
+import s from '../Animals/Animals.module.scss';
 
 const Animals = (props) => {
 	if (!props.isAuth) return <Redirect to="/" />;
@@ -11,9 +11,9 @@ const Animals = (props) => {
 				<table className={s.table}>
 					<thead>
 						<tr>
-							<td className={s.subtitle}>Кличка</td>
-							<td className={s.subtitle}>Тип животного</td>
-							<td className={s.subtitle}>Подтип</td>
+							<th className={s.subtitle}>Кличка</th>
+							<th className={s.subtitle}>Тип животного</th>
+							<th className={s.subtitle}>Подтип</th>
 						</tr>
 					</thead>
 					<tbody>

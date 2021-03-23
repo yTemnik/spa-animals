@@ -7,6 +7,7 @@ import { Redirect } from 'react-router';
 import { InputElem } from './validators/InputElem';
 
 const AuthForm = (props) => {
+
 	return (
 		<div className={s.container}>
 			<form className={s.form} onSubmit={props.handleSubmit}>

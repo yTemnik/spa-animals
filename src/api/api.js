@@ -18,9 +18,9 @@ export const authAPI = {
 			.then((response) => {
 				return response;
 			})
-			.catch(err => {
-			    return err;
-			});
+			.catch((error) => {
+				return error;
+			})
 	},
 };
 

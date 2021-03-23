@@ -1,18 +1,24 @@
 header {
-    width : 100%;
-    background: rgb(245, 244, 244); 
-    padding: 20px 240px;
+	width: 100%;
+	background: rgb(245, 244, 244);
+	padding: 20px 240px;
 }
 
 .list {
-    background: rgb(248,249,250);
-    display: flex;
-    justify-content: space-between;
-    li {
-        list-style-type: none;
-        a {
-            color : black;
-            font-size: 23px;
+	background: rgb(248, 249, 250);
+	display: flex;
+	justify-content: space-between;
+	li {
+		list-style-type: none;
+		font-size: 23px;
+        span {
+            color: black;
         }
-    }
+        & .isActive span {
+            color: rgb(59, 156, 3);
+            font-size: 23px;
+            font-weight: 800;
+        }
+	}
 }
+
