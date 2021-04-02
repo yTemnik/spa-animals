@@ -12,6 +12,10 @@ In terminal:
 ```
 npm run start
 ```
+<div>
+Login : test_user_1
+Password : user10000
+</div>
 
 # Screenshots
 
