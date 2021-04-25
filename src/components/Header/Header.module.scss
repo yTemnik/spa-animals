@@ -1,24 +1,25 @@
 header {
-	width: 100%;
-	background: rgb(245, 244, 244);
-	padding: 20px 240px;
+  width: 100%;
+  background: #20805e;
+  padding: 20px 240px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .list {
-	background: rgb(248, 249, 250);
-	display: flex;
-	justify-content: space-between;
-	li {
-		list-style-type: none;
-		font-size: 23px;
-        span {
-            color: black;
-        }
-        & .isActive span {
-            color: rgb(59, 156, 3);
-            font-size: 23px;
-            font-weight: 800;
-        }
-	}
+  display: flex;
+  justify-content: space-between;
+  li {
+    list-style-type: none;
+    font-size: 23px;
+    span {
+      color: #fff;
+      font-weight: 700px;
+    }
+    & .isActive span {
+      color: #cccccc;
+      font-size: 23px;
+      font-weight: 800;
+      border-bottom: 1px solid #fff;
+    }
+  }
 }
-
