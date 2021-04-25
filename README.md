@@ -28,28 +28,25 @@ Password : user10000
 
 ## Authorisation Error
 <p align="center">
-<img  src="./assets/scrin2.png" width="80%">
+<img  src="./assets/scrin5.png" width="80%">
 </p>
 
 ## Today
 <p align="center">
+<img  src="./assets/scrin2.png" width="80%">
+</p>
+
+## Animals 
+<p align="center">
 <img  src="./assets/scrin3.png" width="80%">
-</p>
-
-## Today Modal
-<p align="center">
-<img  src="./assets/scrin4.png" width="80%">
-</p>
-
-## Animals
-<p align="center">
-<img  src="./assets/scrin5.png" width="80%">
 </p>
 
 ## Animals Modal
 <p align="center">
-<img  src="./assets/scrin6.png" width="80%">
+<img  src="./assets/scrin4.png" width="80%">
 </p>
+
+
 
 
 
