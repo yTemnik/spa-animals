@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setAnimalsTC } from '../../../redux/animals-reducer';
@@ -11,14 +12,14 @@ const AnimalsContainer = (props) => {
 	}, []);
 
 	return (
-		<Animals
-			isAuth={props.isAuth}
-			animalsPage={props.animalsPage}
-			setModalActive={props.setModalActive}
-			setCheckElem={props.setCheckElem}
-/* 			onGetElem={props.onGetElem} */
-		/>
-	);
+    <Animals
+      token={props.token}
+      isAuth={props.isAuth}
+      animalsPage={props.animalsPage}
+      setModalActive={props.setModalActive}
+      setCheckElem={props.setCheckElem}
+    />
+  );
 };
 
 export default AnimalsContainer;

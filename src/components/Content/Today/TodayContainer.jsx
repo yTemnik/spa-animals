@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setTodayTC } from '../../../redux/today-reducer';
@@ -12,6 +13,7 @@ const TodayContainer = (props) => {
 
 	return (
 		<Today
+      token={props.token}
 			isAuth={props.isAuth}
 			todayPage={props.todayPage}
 			setModalActive={props.setModalActive}
